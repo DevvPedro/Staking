@@ -22,10 +22,10 @@ contract Staking {
     //the time of the previous snapshot
     uint256 private lastUpdatedTime;
     //The amount of tokens staked by the user
-    mapping(address => uint256) amountOfTokensStaked;
-    mapping(address => uint256) userRewardPerTokensStaked;
+    mapping(address => uint256) public amountOfTokensStaked;
+    mapping(address => uint256) public userRewardPerTokensStaked;
     // A mapping of the rewards earned by the user to the address
-    mapping(address => uint256) rewards;
+    mapping(address => uint256) public rewards;
 
 
     modifier updateReward(address _user) {
