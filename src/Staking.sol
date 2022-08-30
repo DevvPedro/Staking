@@ -14,13 +14,13 @@ contract Staking {
 
     //This is the reward rate per second
     // To be multiplied by the tokens staked divided by the total supply
-    uint256 private constant REWARD_RATE_PER_SECOND = 100;
+    uint256 public constant REWARD_RATE_PER_SECOND = 100;
     //reward per token staked
-    uint256 private rewardPerStakedToken;
+    uint256 public rewardPerStakedToken;
     //total supply of staketokens
     uint256 public totalSupply;
     //the time of the previous snapshot
-    uint256 private lastUpdatedTime;
+    uint256 public lastUpdatedTime;
     //The amount of tokens staked by the user
     mapping(address => uint256) public amountOfTokensStaked;
     mapping(address => uint256) public userRewardPerTokensStaked;
